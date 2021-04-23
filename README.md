@@ -7,7 +7,7 @@ The idea of this project is to create a program that allows you to import a .svg
 1. Some sort of java compiler (e.g `javac`)
 2. `git` to clone the repository
 ## Building
-1. Clone the git repository
+1. Clone the git repository<br>
 	`git clone https://github.com/kpzip/Fourier_Factory.git`<br>
 	`cd Fourier_Factory`
 2. Edit the source code to your liking
