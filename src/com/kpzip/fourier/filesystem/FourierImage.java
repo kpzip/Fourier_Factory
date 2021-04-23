@@ -49,14 +49,17 @@ public class FourierImage {
 	public void close() throws IOException {
 		read.close();
 		write.close();
-		closed = true;
+		setClosed(true);
 	}
 
+	/**
+	 * @return returns wheather or not this file has been closed
+	 */
 	public boolean isClosed() {
 		return closed;
 	}
 
-	public void setClosed(boolean closed) {
+	private void setClosed(boolean closed) {
 		this.closed = closed;
 	}
 	
