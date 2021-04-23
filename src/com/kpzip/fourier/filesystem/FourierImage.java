@@ -6,7 +6,7 @@ public class FourierImage {
 	
 	public static final String FILE_EXTENSION = ".pft";
 	
-	private String fileLocation = "";
+	private String fileLocation;
 	
 	/**
 	 * Simple constructor that passes in a file location; mainly used when reading a file, since we might have a file that isnt in the default directory
