@@ -8,7 +8,7 @@ The idea of this project is to create a program that allows you to import a .svg
 2. `git` to clone the repository
 ## Building
 1. Clone the git repository
-	`git clone https://github.com/kpzip/Fourier_Factory.git`
+	`git clone https://github.com/kpzip/Fourier_Factory.git`<br>
 	`cd Fourier_Factory`
 2. Edit the source code to your liking
 3. Compile:
