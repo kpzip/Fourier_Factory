@@ -12,8 +12,8 @@ public class Vector2D {
 	//constructors
 	/**
 	 * Creates a 2D vector with set values
-	 * @param x the x-value for the vector
-	 * @param y the y-value for the vector
+	 * @param x - The x-value for the vector.
+	 * @param y - The y-value for the vector.
 	 */
 	public Vector2D(int x, int y) {
 		this.x = x;
@@ -21,8 +21,8 @@ public class Vector2D {
 	}
 	
 	/**
-	 * Creates a 2D vector
-	 * All values will be set to 0.0f by default
+	 * Creates a 2D vector.
+	 * All values will be set to 0.0f by default.
 	 */
 	public Vector2D() {
 		this.x = 0.0f;
@@ -32,48 +32,48 @@ public class Vector2D {
 	//Getters and Setters
 	
 	/**
-	 * @return returns the X value of the vector
+	 * @return Returns the X value of the vector.
 	 */
 	public float getX() {
 		return x;
 	}
 	
 	/**
-	 * Sets the x value of the vector
-	 * @param x the new x value
+	 * Sets the x value of the vector.
+	 * @param x - The new value of x.
 	 */
 	public void setX(float x) {
 		this.x = x;
 	}
 
 	/**
-	 * @return returns the Y value of the vector
+	 * @return Returns the Y value of the vector.
 	 */
 	public float getY() {
 		return y;
 	}
 	
 	/**
-	 * Sets the y value of the vector
-	 * @param y the new y value
+	 * Sets the y value of the vector.
+	 * @param y - The new value of y.
 	 */
 	public void setY(float y) {
 		this.y = y;
 	}
 	
 	/**
-	 * Gets the length of the vector as in polar coordinates
-	 * @return returns the length of the vector
+	 * Gets the length of the vector as in polar coordinates.
+	 * @return Returns the length of the vector.
 	 */
 	public float getRadius() {
-		//use Pythagrean theorem
+		//use Pythagorean theorem
 		return (float) Math.sqrt((double)(Math.pow(y, 2) + Math.pow(x, 2)));
 	}
 	
 	/**
 	 * Gets the angle the vector sits at in radians.
-	 * zero radians is considered to be pointing straight in the positive x direction (right)
-	 * @return returns the angle Theta
+	 * Zero radians is considered to be pointing straight in the positive x direction (right).
+	 * @return Returns the angle theta.
 	 */
 	public float getTheta() {
 		return (float) Math.atan((double)(y/x));
