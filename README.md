@@ -6,6 +6,8 @@ The idea of this project is to create a program that allows you to import a .svg
 ## Prerequisites 
 1. Some sort of java compiler (e.g `javac`)
 2. `git` to clone the repository
+## Dependencies
+1. LWJGL Version 3.2.3
 ## Building
 1. Clone the git repository<br>
 	`git clone https://github.com/kpzip/Fourier_Factory.git`<br>
