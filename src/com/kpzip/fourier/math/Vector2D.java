@@ -66,7 +66,7 @@ public class Vector2D {
 	 * @return Returns the length of the vector.
 	 */
 	public float getRadius() {
-		//use Pythagorean theorem
+		// Use Pythagorean theorem.
 		return (float) Math.sqrt((double)(Math.pow(y, 2) + Math.pow(x, 2)));
 	}
 	
