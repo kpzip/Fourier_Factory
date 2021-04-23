@@ -4,8 +4,9 @@ package com.kpzip.fourier.filesystem;
 //The Fourier Image Format is used for storing the data about each rotating vector
 public class FourierImage {
 	
-	private String fileLocation = "";
 	public static final String FILE_EXTENSION = ".pft";
+	
+	private String fileLocation = "";
 	
 	/**
 	 * Simple constructor that passes in a file location; mainly used when reading a file, since we might have a file that isnt in the default directory
@@ -14,9 +15,14 @@ public class FourierImage {
 	 */
 	public FourierImage(String Location) {
 		if (Location.substring(Location.length() - FILE_EXTENSION.length()) == FILE_EXTENSION) {
-			
+			throw new IllegalArgumentException("Opening a non-" + FILE_EXTENSION + " file with the " + FILE_EXTENSION + " loader!");
 		}
 		this.fileLocation = Location;
 	}
+	
+	public String getFileLocation() {
+		return fileLocation;
+	}
+
 
 }
