@@ -15,7 +15,7 @@ public class FourierImage {
 	 */
 	public FourierImage(String Location) {
 		if (Location.substring(Location.length() - FILE_EXTENSION.length()) == FILE_EXTENSION) {
-			throw new IllegalArgumentException("Opening a non-" + FILE_EXTENSION + " file with the " + FILE_EXTENSION + " loader!");
+			throw new IllegalArgumentException("Opening a non-" + FILE_EXTENSION.substring(1) + " file with the " + FILE_EXTENSION + " loader!");
 		}
 		this.fileLocation = Location;
 	}
