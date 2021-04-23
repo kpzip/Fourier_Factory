@@ -72,7 +72,7 @@ public class Vector2D {
 	
 	/**
 	 * Gets the angle the vector sits at in radians.
-	 * zero radians is considdered to be pointing straight in the positive x direction (right)
+	 * zero radians is considered to be pointing straight in the positive x direction (right)
 	 * @return returns the angle Theta
 	 */
 	public float getTheta() {
