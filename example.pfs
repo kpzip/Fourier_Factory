@@ -1,5 +1,7 @@
 resolution: 300
 image-name: "name"
 image-author: "person"
+vectors:
 {
-vector: 0,0,0
+0,0,0
+}
