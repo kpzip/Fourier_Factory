@@ -1,4 +1,4 @@
-package main;
+package com.kpzip.fourier;
 
 //Main class with the main method
 public class Main {

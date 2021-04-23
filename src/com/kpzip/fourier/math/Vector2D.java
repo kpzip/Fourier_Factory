@@ -1,4 +1,4 @@
-package main.math;
+package com.kpzip.fourier.math;
 
 //Basic class for 2 dimensional vectors
 //assumes all vectors are rooted at the origin
