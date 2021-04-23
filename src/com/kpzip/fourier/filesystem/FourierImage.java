@@ -53,7 +53,7 @@ public class FourierImage {
 	}
 
 	/**
-	 * @return returns wheather or not this file has been closed
+	 * @return returns whether or not this file has been closed
 	 */
 	public boolean isClosed() {
 		return closed;
