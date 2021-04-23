@@ -1,6 +1,6 @@
 # Fourier_Factory
 ## About
-Created by Kyle 'kpzip' Schmerge and Yegor 'comrade1113' Trydin<br>
+Created by Kyle 'kpzip' Schmerge and Yegor 'comrade1113' Tryndin<br>
 Started on 4/22/2021<br>
 The idea of this project is to create a program that allows you to import a .svg file and create a fourier series of rotating vectors that, when added tip to tail, draw out the image by rotating.
 ## Prerequisites 
