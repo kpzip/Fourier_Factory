@@ -12,8 +12,8 @@ The idea of this project is to create a program that allows you to import a .svg
 	`cd Fourier_Factory`
 2. Edit the source code to your liking
 3. Compile:<br>
-	MacOS:
+\tMacOS:
 	
-	Linux:
+\tLinux:
 	
-	Windows:
+\tWindows:
