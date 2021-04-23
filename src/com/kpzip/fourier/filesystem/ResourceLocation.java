@@ -8,9 +8,9 @@ public class ResourceLocation {
 	private String extension;
 	
 	/**
-	 * Generates a resource location opject that points to the specified file
+	 * Generates a resource location object that points to the specified file
 	 * @param path the path of said file
-	 * @precondition contains a file name and extension, uses backslashes "\" to seperate folder names
+	 * @precondition contains a file name and extension, uses backslashes "\" to separate folder names
 	 */
 	public ResourceLocation(String path) {
 		this.extension = "." + path.split(".")[path.split(".").length - 1];
