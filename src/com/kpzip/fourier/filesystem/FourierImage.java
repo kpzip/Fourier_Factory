@@ -14,9 +14,11 @@ public class FourierImage {
 	 * @param Location - The location of the file on disk.
 	 */
 	public FourierImage(String Location) {
+		//check if the file specified ends in FILE_EXTENSION
 		if (Location.substring(Location.length() - FILE_EXTENSION.length()) == FILE_EXTENSION) {
 			throw new IllegalArgumentException("Opening a non-" + FILE_EXTENSION.substring(1) + " file with the " + FILE_EXTENSION + " loader!");
 		}
+		//if the file is valid, set the location variable
 		this.fileLocation = Location;
 	}
 	
