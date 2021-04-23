@@ -1,6 +1,6 @@
 package com.kpzip.fourier;
 
-//Main class with the main method
+// Main class with the main method.
 public class Main {
 	
 	public static void main(String[] args) {
