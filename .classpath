@@ -81,7 +81,7 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="lib/lwjgl-glfw.jar">
+	<classpathentry kind="lib" path="lib/lwjgl-glfw.jar" sourcepath="lib/lwjgl-glfw.jar">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>
