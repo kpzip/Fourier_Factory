@@ -31,6 +31,7 @@ public class ResourceLocation {
 	/**
 	 * @return string representing the files location, name and extension. Same as the string you would pass into a file reader 
 	 */
+	@Override
 	public String toString() {
 		return path + filename + extension;
 	}
