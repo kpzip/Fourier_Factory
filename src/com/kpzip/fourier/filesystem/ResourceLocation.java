@@ -1,5 +1,7 @@
 package com.kpzip.fourier.filesystem;
 
+import java.util.regex.Pattern;
+
 //Class for storing data about a file or resource's location
 public class ResourceLocation {
 	
@@ -13,7 +15,16 @@ public class ResourceLocation {
 	 * @precondition contains a file name and extension, uses backslashes "\" to separate folder names
 	 */
 	public ResourceLocation(String path) {
-		this.extension = "." + path.split(".")[path.split(".").length - 1];
+		
+		//some string parsing code to get the extension of the file includes the "."
+		this.extension = "." + path.split("\\.")[path.split("\\.").length - 1];
+		
+		//gets the filename without the extension
+		this.filename = path.split("\\.")[0].split(Pattern.quote("\\"))[path.split("\\.")[0].split(Pattern.quote("\\")).length - 1];
+		
+		//gets the folder location of the file.
+		this.path = path.substring(0, path.length() - (this.filename.length() + this.extension.length() + 1));
+		
 	}
 	
 	public String getPath() {
