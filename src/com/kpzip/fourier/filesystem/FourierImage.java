@@ -37,8 +37,8 @@ public class FourierImage {
 	 * Note there is no Setter method for the file location
 	 * @return Returns the file location associated with this object
 	 */
-	public String getFileLocation() {
-		return fileLocation;
+	public ResourceLocation getFileLocation() {
+		return location;
 	}
 	
 	/**
