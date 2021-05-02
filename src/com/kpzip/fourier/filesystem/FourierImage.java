@@ -10,7 +10,7 @@ public class FourierImage {
 	
 	public static final String FILE_EXTENSION = ".pft";
 	
-	private String fileLocation;
+	private ResourceLocation location;
 	private FileReader read;
 	private FileWriter write;
 	private boolean closed = false;
@@ -21,15 +21,15 @@ public class FourierImage {
 	 * @param Location - The location of the file on disk.
 	 * @throws IOException 
 	 */
-	public FourierImage(String Location) throws IOException {
+	public FourierImage(ResourceLocation loc) throws IOException {
 		//check if the file specified ends in FILE_EXTENSION
-		if (Location.substring(Location.length() - FILE_EXTENSION.length()) == FILE_EXTENSION) {
+		if (loc.getExtension() != FILE_EXTENSION) {
 			throw new IllegalArgumentException("Opening a non-" + FILE_EXTENSION.substring(1) + " file with the " + FILE_EXTENSION + " loader!");
 		}
 		//if the file is valid, set the location variable
-		this.fileLocation = Location;
-		read = new FileReader(fileLocation);
-		write = new FileWriter(fileLocation);
+		this.location = loc;
+		read = new FileReader(location.toString());
+		write = new FileWriter(location.toString());
 	}
 	
 	/**
