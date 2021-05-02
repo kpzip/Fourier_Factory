@@ -27,14 +27,23 @@ public class ResourceLocation {
 		
 	}
 	
+	/**
+	 * @return returns the path of the file. does not include the file name or extension.
+	 */
 	public String getPath() {
 		return path;
 	}
 
+	/**
+	 * @return returns the name of the file. does not include the path or the extension.
+	 */
 	public String getFilename() {
 		return filename;
 	}
 
+	/**
+	 * @return returns the extension of the file. includes the "."
+	 */
 	public String getExtension() {
 		return extension;
 	}
