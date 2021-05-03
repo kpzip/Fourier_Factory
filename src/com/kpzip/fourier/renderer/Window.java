@@ -40,8 +40,9 @@ public class Window {
 		GLFWErrorCallback.createPrint(System.err).set();
 
 		// Initialize GLFW. Most GLFW functions will not work before doing this.
-		if ( !glfwInit() )
+		if ( !glfwInit() ) {
 			throw new IllegalStateException("Unable to initialize GLFW");
+		}
 
 		// Configure GLFW
 		glfwDefaultWindowHints(); // Optional, the current window hints are already the default.
@@ -50,8 +51,9 @@ public class Window {
 
 		// Create the window.
 		window = glfwCreateWindow(300, 300, "Fourier_Factory", NULL, NULL);
-		if ( window == NULL )
+		if ( window == NULL ) {
 			throw new RuntimeException("Failed to create the GLFW window");
+		}
 
 		// Setup a key callback. It will be called every time a key is pressed, repeated or released.
 		glfwSetKeyCallback(window, (window, key, scancode, action, mods) -> {
