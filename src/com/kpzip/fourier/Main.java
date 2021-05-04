@@ -6,9 +6,7 @@ import com.kpzip.fourier.renderer.Window;
 public class Main {
 	
 	public static void main(String[] args) {
-		
-		//create window
-		Window window = new Window();
+		Window window = new Window(1280, 720, "Fourier Factory");
 		window.run();
 	}
 

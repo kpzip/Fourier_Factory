@@ -44,7 +44,7 @@ public class FourierImage {
 	/**
 	 * When called, closes the file. 
 	 * This should be called when writing or reading to this file via this object is not longer needed.
-	 * @throws IOException if it is unable to close t
+	 * @throws IOException if it is unable to close it
 	 */
 	public void close() throws IOException {
 		read.close();
