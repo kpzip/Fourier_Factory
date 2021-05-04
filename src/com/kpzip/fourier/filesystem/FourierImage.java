@@ -4,6 +4,9 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
+import com.kpzip.fourier.util.Logger;
+import com.kpzip.fourier.util.LoggerType;
+
 // Class used for reading and writing in the Fourier Image Format.
 // The Fourier Image Format is used for storing the data about each rotating vector.
 public class FourierImage {
@@ -24,7 +27,8 @@ public class FourierImage {
 	public FourierImage(ResourceLocation loc) throws IOException {
 		//check if the file specified ends in FILE_EXTENSION
 		if (loc.getExtension() != FILE_EXTENSION) {
-			throw new IllegalArgumentException("Opening a non-" + FILE_EXTENSION.substring(1) + " file with the " + FILE_EXTENSION + " loader!");
+			Logger.log(LoggerType.ERROR, "Trying to open the wrong file type with the fourier image loader!");
+			throw new IllegalArgumentException();
 		}
 		//if the file is valid, set the location variable
 		this.location = loc;
