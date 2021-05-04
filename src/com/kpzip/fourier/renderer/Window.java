@@ -24,7 +24,6 @@ public class Window {
 	private long         window;
 	private String       title;
 	private Thread       app;
-	public  Input        input;
 	
 	
 	public Window(int width, int height, String title) {
@@ -38,7 +37,7 @@ public class Window {
 		while (!shouldClose()) {
 			update();
 			render();
-			if(input.isKeyDown(GLFW.GLFW_KEY_ESCAPE)) {
+			if(Input.isKeyDown(GLFW.GLFW_KEY_ESCAPE)) {
 				return;
 			}
 		}
@@ -46,7 +45,6 @@ public class Window {
 	}
 	
 	public void destroy() {
-		input.destroy();
 		glfwWindowShouldClose(window);
 		glfwDestroyWindow(window);
 		glfwTerminate();
@@ -57,8 +55,6 @@ public class Window {
 			Logger.log(LoggerType.ERROR, "GLFW was unable to initialize!");
 			return;
 		}
-		
-		input = new Input();
 
 		window = glfwCreateWindow(width, height, title, 0, 0);
 
@@ -73,9 +69,9 @@ public class Window {
 		glfwSetWindowPos(window, (videoMode.width() - width) / 2, (videoMode.height() - height) / 2);
 		glfwMakeContextCurrent(window);
 		
-		glfwSetKeyCallback(window, input.getKeyboardCallback());
-		glfwSetCursorPosCallback(window, input.getMouseMovementCallback());
-		glfwSetMouseButtonCallback(window, input.getMouseButtonsCallback());
+		glfwSetKeyCallback(window, Input.getKeyboardCallback());
+		glfwSetCursorPosCallback(window, Input.getMouseMovementCallback());
+		glfwSetMouseButtonCallback(window, Input.getMouseButtonsCallback());
 		
 		glfwShowWindow(window);
 		
@@ -94,6 +90,11 @@ public class Window {
 			glfwSetWindowTitle(window, title + " - FPS: " + frames);
 			time   = System.currentTimeMillis();
 			frames = 0;
+			
+		}
+		
+		if(Input.isButtonDown(GLFW.GLFW_MOUSE_BUTTON_RIGHT)) {
+			Logger.log(LoggerType.INFO, "Mouse clicked");
 		}
 	}
 

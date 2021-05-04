@@ -10,9 +10,9 @@ public class Input {
 	private static boolean[] buttons = new boolean[GLFW.GLFW_MOUSE_BUTTON_LAST];
 	private static double mouseX, mouseY;
 	
-	private GLFWKeyCallback keyboard;
-	private GLFWCursorPosCallback mouseMovement;
-	private GLFWMouseButtonCallback mouseButtons;
+	private static GLFWKeyCallback keyboard;
+	private static GLFWCursorPosCallback mouseMovement;
+	private static GLFWMouseButtonCallback mouseButtons;
 	
 	public Input() {
 		keyboard = new GLFWKeyCallback() {
@@ -57,15 +57,15 @@ public class Input {
 		return mouseY;
 	}
 
-	public GLFWKeyCallback getKeyboardCallback() {
+	public static GLFWKeyCallback getKeyboardCallback() {
 		return keyboard;
 	}
 
-	public GLFWCursorPosCallback getMouseMovementCallback() {
+	public static GLFWCursorPosCallback getMouseMovementCallback() {
 		return mouseMovement;
 	}
 
-	public GLFWMouseButtonCallback getMouseButtonsCallback() {
+	public static GLFWMouseButtonCallback getMouseButtonsCallback() {
 		return mouseButtons;
 	}
 	
