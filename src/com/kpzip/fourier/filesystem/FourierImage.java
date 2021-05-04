@@ -28,8 +28,8 @@ public class FourierImage {
 		}
 		//if the file is valid, set the location variable
 		this.location = loc;
-		read = new FileReader(location.toString());
 		write = new FileWriter(location.toString());
+		read = new FileReader(location.toString());
 	}
 	
 	/**
@@ -50,6 +50,10 @@ public class FourierImage {
 		read.close();
 		write.close();
 		setClosed(true);
+	}
+	
+	public void writeBaseValues(String author, String name, int resolution) {
+		
 	}
 
 	/**
