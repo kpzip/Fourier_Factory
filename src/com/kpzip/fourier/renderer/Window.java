@@ -5,6 +5,7 @@ import org.lwjgl.glfw.*;
 import org.lwjgl.opengl.*;
 import org.lwjgl.system.*;
 
+import com.kpzip.fourier.game.MainLoop;
 import com.kpzip.fourier.util.Logger;
 import com.kpzip.fourier.util.LoggerType;
 
@@ -37,9 +38,7 @@ public class Window {
 		while (!shouldClose()) {
 			update();
 			render();
-			if(Input.isKeyDown(GLFW.GLFW_KEY_ESCAPE)) {
-				return;
-			}
+			MainLoop.runLoop();
 		}
 		destroy();
 	}
